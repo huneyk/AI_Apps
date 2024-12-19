@@ -154,6 +154,7 @@ with col1:
                     agents=[researcher, creator, interpreter],
                     tasks=[research, create, interprete],
                     verbose=True,
+                    enable_memory=False,
                     process=Process.sequential,
                 )
 

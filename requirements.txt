@@ -4,5 +4,4 @@ openai
 serpapi
 crewai
 crewai_tools
-crewai.process
 langchain_openai

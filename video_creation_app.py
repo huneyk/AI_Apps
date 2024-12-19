@@ -6,6 +6,8 @@ from crewai.process import Process
 from crewai_tools import SerperDevTool, WebsiteSearchTool, ScrapeWebsiteTool
 from langchain_openai import ChatOpenAI
 
+os.environ["CREWAI_FORCE_MEMORY_STORE"] = "True"
+os.environ["CHROMADB_NO_SQLITE"] = "True"
 # Load environment variables
 load_dotenv()
 

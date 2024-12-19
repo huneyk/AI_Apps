@@ -6,8 +6,6 @@ from crewai.process import Process
 from crewai_tools import SerperDevTool, WebsiteSearchTool, ScrapeWebsiteTool
 from langchain_openai import ChatOpenAI
 
-os.environ["CREWAI_FORCE_MEMORY_STORE"] = "True"
-os.environ["CHROMADB_NO_SQLITE"] = "True"
 # Load environment variables
 load_dotenv()
 
@@ -154,7 +152,6 @@ with col1:
                     agents=[researcher, creator, interpreter],
                     tasks=[research, create, interprete],
                     verbose=True,
-                    enable_memory=False,
                     process=Process.sequential,
                 )
 
